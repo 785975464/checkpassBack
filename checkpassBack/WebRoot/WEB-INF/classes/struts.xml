@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.action.excludePattern" value="/Createasytj,/AddRecord"></constant>
+
+
+
+    
+    <!-- 2017.5.7 -->
+    <package name="PersonInfoAction" extends="struts-default,json-default"
+		namespace="/">
+		<action name="createUser" class="personinfoAction" method="createUser">	<!--  添加用户 -->
+		</action>
+		<action name="delUser" class="personinfoAction" method="delUser">	<!--  删除用户 -->
+		</action>
+		<action name="updateUserInfo" class="personinfoAction" method="updateUserInfo">	<!--  修改用户 -->
+		</action>
+		<action name="getUserInfo" class="personinfoAction" method="getUserInfo">	<!--  查询单个用户 -->
+		</action>
+		<action name="getAllUsersInfo" class="personinfoAction" method="getAllUsersInfo">	<!--  查找所有用户 -->
+		</action>
+	</package>
+	
+	<package name="TradeInfoAction" extends="struts-default,json-default"
+		namespace="/">
+		<action name="createTradeinfo" class="tradeinfoAction" method="createTradeinfo">	<!--  添加记录 -->
+		</action>
+		<action name="getTradeInfo" class="tradeinfoAction" method="getTradeInfo">	<!--  查询单个记录 -->
+		</action>
+		<action name="getAllTradesInfo" class="tradeinfoAction" method="getAllTradesInfo">	<!--  查找所有记录 -->
+		</action>
+	</package>
+</struts>    
